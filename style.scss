@@ -36,7 +36,7 @@ header {
           right: 0;
           top: 93px;
           background-color: #416e59;
-          padding: 15px !important;
+          padding: 12px !important;
 
           &.mobile-active {
             transform: translateX(0px);
@@ -56,12 +56,14 @@ header {
 
           .dropdown-item {
             display: none;
+          }
 
-            &.active {
+          &:hover {
+            .dropdown-item {
               display: block;
               width: 140px;
               list-style: none;
-              position: absolute;
+              position: initial;
               background-color: #fff;
               border-radius: 4px;
               border: 1px solid #d7d7d7;
@@ -81,6 +83,7 @@ header {
               }
             }
           }
+
           a {
             text-decoration: none;
             color: #fff;
