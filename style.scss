@@ -12,9 +12,9 @@ header {
     align-items: center;
     gap: 30px;
 
-     .open-menu {
-          filter: brightness(10);
-        }
+    .open-menu {
+      filter: brightness(10);
+    }
 
     @media (max-width: 991px) {
       justify-content: space-between;
@@ -40,6 +40,24 @@ header {
 
           &.mobile-active {
             transform: translateX(0px);
+
+            .dropdown {
+              width: max-content;
+
+              &:after {
+                content: "+";
+                font-size: 1rem;
+                display: block;
+                color: #fff;
+                position: absolute;
+                top: 0;
+                right: -20px;
+              }
+              
+              .dropdown-item {
+                position: initial;
+              }
+            }
           }
         }
       }
@@ -56,14 +74,12 @@ header {
 
           .dropdown-item {
             display: none;
-          }
 
-          &:hover {
-            .dropdown-item {
+            &.active {
               display: block;
               width: 140px;
               list-style: none;
-              position: initial;
+              position: absolute;
               background-color: #fff;
               border-radius: 4px;
               border: 1px solid #d7d7d7;
@@ -83,7 +99,6 @@ header {
               }
             }
           }
-
           a {
             text-decoration: none;
             color: #fff;
