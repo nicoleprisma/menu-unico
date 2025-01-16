@@ -21,4 +21,14 @@ dropdownItem.forEach((item) => {
   item.addEventListener("mouseleave", () => {
     dropdownMenu.classList.toggle("active");
   });
+
+  if (window.matchMedia("(max-width: 991px)").matches) {
+    item.addEventListener("mouseenter", () => {
+      dropdownMenu.classList.toggle("active");
+    });
+
+    item.addEventListener("mouseleave", () => {
+      dropdownMenu.classList.toggle("active");
+    });
+  }
 });
