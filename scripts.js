@@ -13,7 +13,6 @@ const dropdownItem = document.querySelectorAll(".dropdown");
 
 dropdownItem.forEach((item) => {
   const dropdownMenu = item.querySelector(".dropdown-item");
-
   item.addEventListener("mouseenter", () => {
     dropdownMenu.classList.toggle("active");
   });
@@ -23,9 +22,9 @@ dropdownItem.forEach((item) => {
   });
 
   //dropdown mobile
-   if (window.matchMedia("(max-width: 991px)").matches) {
-     item.addEventListener("click", () => {
-       dropdownMenu.classList.toggle("active");
-     });
-   }
+  // if (window.matchMedia("(max-width: 991px)").matches) {
+  //    item.addEventListener("click", () => {
+  //      dropdownMenu.classList.toggle("active");
+  //    });
+  //  }
 });

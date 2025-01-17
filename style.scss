@@ -38,26 +38,26 @@ header {
           background-color: #416e59;
           padding: 12px !important;
 
+          .dropdown {
+            width: max-content;
+
+            &:after {
+              content: "+";
+              font-size: 1rem;
+              display: block;
+              color: #fff;
+              position: absolute;
+              top: 0;
+              right: -20px;
+            }
+
+            .dropdown-item {
+              position: initial !important;
+            }
+          }
+
           &.mobile-active {
             transform: translateX(0px);
-
-            .dropdown {
-              width: max-content;
-
-              &:after {
-                content: "+";
-                font-size: 1rem;
-                display: block;
-                color: #fff;
-                position: absolute;
-                top: 0;
-                right: -20px;
-              }
-              
-              .dropdown-item {
-                position: initial;
-              }
-            }
           }
         }
       }
